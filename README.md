@@ -1,5 +1,10 @@
 # GPReg
 
+# Setup
+
+The code can be easily used by creating a conda environment with the 'spec-file.txt' provided.
+To use the BCPD registration class, it is necessary to obtain the code from the authors page at 'https://github.com/ohirose/bcpd#point-set-registration' and place it under 'Other_methods\BCPD'. Further the matlab script file 'bcpd_register.m' (already in that same folder) must be updated with the absolute path to the BCPD executable. 
+
 # Usage
 
 Define the desired kernel
@@ -34,14 +39,9 @@ corr_method = 'our_proposal'
 varReg_init [float] : initial variance for the registration.
 prob_out [float] : outlier probability $\omega$
 
-### General parameters
 
-maxiter [int] : maximum number of iterations allowed
+# Example
 
-
-Execute the registration
---
-
-The registration can be then executed by calling the method iterative_reg of class GpModel.
+An example script is provided in the file 'demo.py'. It does the registration of a 2D data in folder '\resources\Ex_2d_rectangles' and provides examples for some of the code functionalities.
 
 
